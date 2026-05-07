@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You Can Only Get On</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- GATE SCREEN -->
+  <div id="gate" class="screen active">
+    <div class="gate-box">
+      <div class="lock-icon" id="lockIcon">&#128274;</div>
+      <h1 class="gate-title">ACCESS RESTRICTED</h1>
+      <p class="gate-subtitle">Only those who know the way may enter.</p>
+      <div class="input-row">
+        <input
+          type="password"
+          id="passInput"
+          class="pass-input"
+          placeholder="enter the phrase..."
+          maxlength="32"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="enterBtn" class="enter-btn">&#8594;</button>
+      </div>
+      <p id="errorMsg" class="error-msg"></p>
+      <p class="hint-toggle" id="hintToggle">need a hint?</p>
+      <p class="hint-text" id="hintText">&#34;The only way in... is to say you&#39;re already on.&#34;</p>
+    </div>
+    <div class="scanline"></div>
+  </div>
+
+  <!-- INSIDE SCREEN -->
+  <div id="inside" class="screen">
+    <div class="inside-content">
+      <div class="check-icon">&#10003;</div>
+      <h1 class="inside-title">YOU&#39;RE ON.</h1>
+      <p class="inside-sub">Welcome to the other side.<br>You always knew you belonged here.</p>
+      <div class="inside-card">
+        <p>There is nothing to see here.</p>
+        <p>There never was.</p>
+        <p>And yet — you made it.</p>
+      </div>
+      <button class="leave-btn" id="leaveBtn">leave (and lose access)</button>
+    </div>
+    <div class="particle-field" id="particleField"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
